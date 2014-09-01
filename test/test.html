@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+	<title>Demonstration for Heat Map</title>
+	<script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="../heatmap.js"></script>
+	<style type="text/css">
+		table {
+			border-collapse: collapse;
+		}
+		caption {
+			background: #D3D3D3;
+		}
+		th {
+			background: #A7C942;
+			border: 1px solid #98BF21;
+			color: #ffffff;
+			font-weight: bold;
+			text-align: left;
+		}
+		td {
+			border: 1px solid #98BF21;
+			text-align: left;
+			font-weight: normal;
+			color: #000000;
+		}
+		tr:nth-child(odd) {
+			background: #ffffff;
+		}
+		tbody tr:nth-child(odd) th {
+			background: #ffffff;
+			color: #000000;
+		}
+		tr:nth-child(even) {
+			background: #EAF2D3;
+		}
+		tbody tr:nth-child(even) th {
+			background: #EAF2D3;
+			color: #000000;
+		}
+		#target {
+			width: 600px;
+			height: 400px;
+		}
+	</style>
+</head>
+<body>
+	<table id="source">
+		<caption>Average income</caption>
+		<thead>
+			<tr>
+				<th>Area</th>
+				<th>Amount</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th class="source">Los Angles</td>
+				<td class="value">2.5</td>
+			</tr>
+			<tr>
+				<th class="source">Georgia</td>
+				<td class="value">1.5</td>
+			</tr>
+			<tr>
+				<th class="source">New York</td>
+				<td class="value">3.2</td>
+			</tr>
+			<tr>
+                <th class="source">Washington</td>
+                <td class="value">2.2</td>
+            </tr>
+            <tr>
+                <th class="source">Colorado</td>
+                <td class="value">1.2</td>
+            </tr>
+            <tr>
+                <th class="source">Dallas</td>
+                <td class="value">2.1</td>
+            </tr>
+		</tbody>
+	</table>
+    <br/>
+    <br/>
+	<div id="target">
+	</div>
+
+<script type="text/javascript">
+	$(function() {
+		$('#source').heatmap('target', 15);
+	});
+</script>
+
+</body>
+</html>
