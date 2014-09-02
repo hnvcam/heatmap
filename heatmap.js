@@ -3,7 +3,7 @@
  *
  * Copyright (c) 2014, AIWSolutions
  * License: GPL2
- * Project Website: http://wiki.aiwsolutions.net/
+ * Project Website: http://wiki.aiwsolutions.net/f1fkZ
  **/
 
 jQuery.fn.heatmap = function(targetDivId, multiplier) {
